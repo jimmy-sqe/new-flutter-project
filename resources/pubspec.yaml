@@ -1,0 +1,28 @@
+name: resources
+description: Assets, localization, generated files.
+version: 0.0.1
+publish_to: none
+
+environment:
+  sdk: '>=3.6.0 <4.0.0'
+  flutter: '>=3.27.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.19.0
+
+dev_dependencies:
+  flutter_lints: ^2.0.1
+  intl_utils: ^2.8.5
+
+flutter_intl:
+  enabled: true
+  main_locale: en
+  output_dir: lib/src/generated
+  arb_dir: lib/src/l10n
+
+flutter:
+  uses-material-design: true

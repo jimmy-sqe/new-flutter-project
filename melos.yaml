@@ -1,0 +1,42 @@
+name: new_flutter_project
+
+packages:
+  - ./**
+
+command:
+  bootstrap:
+    runPubGetInParallel: false
+
+scripts:
+  force_build_all:
+    run: melos exec --depends-on="build_runner" -- "dart run build_runner build --delete-conflicting-outputs"
+
+  force_build_app:
+    run: melos exec --fail-fast --scope="*app*" --depends-on="build_runner" -- "dart run build_runner build --delete-conflicting-outputs"
+
+  force_build_domain:
+    run: melos exec --fail-fast --scope="*domain*" --depends-on="build_runner" -- "dart run build_runner build --delete-conflicting-outputs"
+
+  force_build_data:
+    run: melos exec --fail-fast --scope="*data*" --depends-on="build_runner" -- "dart run build_runner build --delete-conflicting-outputs"
+
+  force_build_shared:
+    run: melos exec --fail-fast --scope="*shared*" --depends-on="build_runner" -- "dart run build_runner build --delete-conflicting-outputs"
+
+  l10n:
+    run: melos exec --fail-fast --scope="*resources*" -- "flutter pub run intl_utils:generate"
+
+  test:
+    run: melos exec --fail-fast --dir-exists="test" -- "flutter test"
+
+  format:
+    run: melos exec -- "dart format --set-exit-if-changed -l 100 lib"
+
+  analyze:
+    run: melos exec -- "flutter analyze --no-pub"
+
+  lint:
+    run: melos run analyze
+
+  clean_all:
+    run: melos exec -- "flutter clean"
