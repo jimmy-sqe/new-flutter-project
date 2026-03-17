@@ -5,11 +5,13 @@ class HomeView extends StatelessWidget {
   const HomeView({
     required this.welcomeMessage,
     required this.onLogoutPressed,
+    required this.onViewProfilePressed,
     super.key,
   });
 
   final String welcomeMessage;
   final VoidCallback onLogoutPressed;
+  final VoidCallback onViewProfilePressed;
 
   @override
   Widget build(BuildContext context) {
@@ -17,6 +19,11 @@ class HomeView extends StatelessWidget {
       appBar: AppBar(
         title: Text(S.of(context).home),
         actions: [
+          IconButton(
+            icon: const Icon(Icons.person),
+            tooltip: 'Profile',
+            onPressed: onViewProfilePressed,
+          ),
           IconButton(
             icon: const Icon(Icons.logout),
             tooltip: S.of(context).logout,

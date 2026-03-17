@@ -14,3 +14,4 @@ export 'src/usecase/base/io/base_input.dart';
 export 'src/usecase/base/io/base_output.dart';
 export 'src/usecase/login/login_use_case.dart';
 export 'src/usecase/login/login_with_google_use_case.dart';
+export 'src/usecase/profile/get_user_profile_use_case.dart';

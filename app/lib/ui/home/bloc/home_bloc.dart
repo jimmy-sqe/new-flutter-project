@@ -12,6 +12,7 @@ class HomeBloc extends BaseBloc<HomeEvent, HomeState> {
       : super(const HomeState()) {
     on<HomeInitiated>(_onHomeInitiated);
     on<LogoutButtonPressed>(_onLogoutButtonPressed);
+    on<ViewProfileButtonPressed>(_onViewProfileButtonPressed);
   }
 
   final AuthenticationRepository _authenticationRepository;
@@ -35,5 +36,12 @@ class HomeBloc extends BaseBloc<HomeEvent, HomeState> {
         navigator.replaceAll([const AppRouteInfo.login()]);
       },
     );
+  }
+
+  void _onViewProfileButtonPressed(
+    ViewProfileButtonPressed event,
+    Emitter<HomeState> emit,
+  ) {
+    navigator.push(const AppRouteInfo.userProfile());
   }
 }

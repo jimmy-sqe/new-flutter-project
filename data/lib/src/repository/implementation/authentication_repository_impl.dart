@@ -1,6 +1,9 @@
+import 'package:data/src/repository/mapper/profile/user_profile_data_mapper.dart';
 import 'package:data/src/repository/model/auth/auth_response_data.dart';
+import 'package:data/src/repository/model/profile/user_profile_response_data.dart';
 import 'package:data/src/repository/source/api/app_api_client.dart';
 import 'package:data/src/repository/source/api/service/authentication_api_service.dart';
+import 'package:data/src/repository/source/api/service/profile_api_service.dart';
 import 'package:data/src/repository/source/preference/app_preferences.dart';
 import 'package:domain/domain.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -10,10 +13,14 @@ import 'package:injectable/injectable.dart';
 class AuthenticationRepositoryImpl implements AuthenticationRepository {
   AuthenticationRepositoryImpl(
     this._authenticationApiService,
+    this._profileApiService,
+    this._userProfileDataMapper,
     this._appPreferences,
   );
 
   final AuthenticationApiService _authenticationApiService;
+  final ProfileApiService _profileApiService;
+  final UserProfileDataMapper _userProfileDataMapper;
   final AppPreferences _appPreferences;
   final GoogleSignIn _googleSignIn = GoogleSignIn();
 
@@ -73,5 +80,19 @@ class AuthenticationRepositoryImpl implements AuthenticationRepository {
   @override
   Future<void> logout() async {
     await _appPreferences.clearCurrentUserData();
+  }
+
+  @override
+  Future<User> getUserProfile() async {
+    try {
+      final response = await _profileApiService.getUserProfile();
+      final responseData = UserProfileResponseData.fromJson(
+        response.data as Map<String, dynamic>,
+      );
+
+      return _userProfileDataMapper.mapToEntity(responseData);
+    } catch (error) {
+      throw _remoteExceptionMapper.map(error);
+    }
   }
 }

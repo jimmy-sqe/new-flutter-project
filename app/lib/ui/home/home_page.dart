@@ -32,6 +32,9 @@ class _HomePageState extends BasePageState<HomePage, HomeBloc> {
           onLogoutPressed: () {
             bloc.add(const HomeEvent.logoutButtonPressed());
           },
+          onViewProfilePressed: () {
+            bloc.add(const HomeEvent.viewProfileButtonPressed());
+          },
         );
       },
     );

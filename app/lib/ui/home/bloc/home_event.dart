@@ -8,4 +8,5 @@ part 'home_event.freezed.dart';
 class HomeEvent extends BaseBlocEvent with _$HomeEvent {
   const factory HomeEvent.homeInitiated() = HomeInitiated;
   const factory HomeEvent.logoutButtonPressed() = LogoutButtonPressed;
+  const factory HomeEvent.viewProfileButtonPressed() = ViewProfileButtonPressed;
 }
