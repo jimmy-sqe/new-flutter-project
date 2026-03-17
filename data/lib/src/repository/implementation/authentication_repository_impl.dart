@@ -7,6 +7,7 @@ import 'package:data/src/repository/source/api/service/profile_api_service.dart'
 import 'package:data/src/repository/source/preference/app_preferences.dart';
 import 'package:domain/domain.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:shared/shared.dart';
 import 'package:injectable/injectable.dart';
 
 @LazySingleton(as: AuthenticationRepository)

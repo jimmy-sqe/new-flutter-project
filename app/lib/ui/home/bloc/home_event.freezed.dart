@@ -20,18 +20,21 @@ mixin _$HomeEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() homeInitiated,
     required TResult Function() logoutButtonPressed,
+    required TResult Function() viewProfileButtonPressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? homeInitiated,
     TResult? Function()? logoutButtonPressed,
+    TResult? Function()? viewProfileButtonPressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? homeInitiated,
     TResult Function()? logoutButtonPressed,
+    TResult Function()? viewProfileButtonPressed,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -39,18 +42,22 @@ mixin _$HomeEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(HomeInitiated value) homeInitiated,
     required TResult Function(LogoutButtonPressed value) logoutButtonPressed,
+    required TResult Function(ViewProfileButtonPressed value)
+        viewProfileButtonPressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(HomeInitiated value)? homeInitiated,
     TResult? Function(LogoutButtonPressed value)? logoutButtonPressed,
+    TResult? Function(ViewProfileButtonPressed value)? viewProfileButtonPressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(HomeInitiated value)? homeInitiated,
     TResult Function(LogoutButtonPressed value)? logoutButtonPressed,
+    TResult Function(ViewProfileButtonPressed value)? viewProfileButtonPressed,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -119,6 +126,7 @@ class _$HomeInitiatedImpl implements HomeInitiated {
   TResult when<TResult extends Object?>({
     required TResult Function() homeInitiated,
     required TResult Function() logoutButtonPressed,
+    required TResult Function() viewProfileButtonPressed,
   }) {
     return homeInitiated();
   }
@@ -128,6 +136,7 @@ class _$HomeInitiatedImpl implements HomeInitiated {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? homeInitiated,
     TResult? Function()? logoutButtonPressed,
+    TResult? Function()? viewProfileButtonPressed,
   }) {
     return homeInitiated?.call();
   }
@@ -137,6 +146,7 @@ class _$HomeInitiatedImpl implements HomeInitiated {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? homeInitiated,
     TResult Function()? logoutButtonPressed,
+    TResult Function()? viewProfileButtonPressed,
     required TResult orElse(),
   }) {
     if (homeInitiated != null) {
@@ -150,6 +160,8 @@ class _$HomeInitiatedImpl implements HomeInitiated {
   TResult map<TResult extends Object?>({
     required TResult Function(HomeInitiated value) homeInitiated,
     required TResult Function(LogoutButtonPressed value) logoutButtonPressed,
+    required TResult Function(ViewProfileButtonPressed value)
+        viewProfileButtonPressed,
   }) {
     return homeInitiated(this);
   }
@@ -159,6 +171,7 @@ class _$HomeInitiatedImpl implements HomeInitiated {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(HomeInitiated value)? homeInitiated,
     TResult? Function(LogoutButtonPressed value)? logoutButtonPressed,
+    TResult? Function(ViewProfileButtonPressed value)? viewProfileButtonPressed,
   }) {
     return homeInitiated?.call(this);
   }
@@ -168,6 +181,7 @@ class _$HomeInitiatedImpl implements HomeInitiated {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(HomeInitiated value)? homeInitiated,
     TResult Function(LogoutButtonPressed value)? logoutButtonPressed,
+    TResult Function(ViewProfileButtonPressed value)? viewProfileButtonPressed,
     required TResult orElse(),
   }) {
     if (homeInitiated != null) {
@@ -225,6 +239,7 @@ class _$LogoutButtonPressedImpl implements LogoutButtonPressed {
   TResult when<TResult extends Object?>({
     required TResult Function() homeInitiated,
     required TResult Function() logoutButtonPressed,
+    required TResult Function() viewProfileButtonPressed,
   }) {
     return logoutButtonPressed();
   }
@@ -234,6 +249,7 @@ class _$LogoutButtonPressedImpl implements LogoutButtonPressed {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? homeInitiated,
     TResult? Function()? logoutButtonPressed,
+    TResult? Function()? viewProfileButtonPressed,
   }) {
     return logoutButtonPressed?.call();
   }
@@ -243,6 +259,7 @@ class _$LogoutButtonPressedImpl implements LogoutButtonPressed {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? homeInitiated,
     TResult Function()? logoutButtonPressed,
+    TResult Function()? viewProfileButtonPressed,
     required TResult orElse(),
   }) {
     if (logoutButtonPressed != null) {
@@ -256,6 +273,8 @@ class _$LogoutButtonPressedImpl implements LogoutButtonPressed {
   TResult map<TResult extends Object?>({
     required TResult Function(HomeInitiated value) homeInitiated,
     required TResult Function(LogoutButtonPressed value) logoutButtonPressed,
+    required TResult Function(ViewProfileButtonPressed value)
+        viewProfileButtonPressed,
   }) {
     return logoutButtonPressed(this);
   }
@@ -265,6 +284,7 @@ class _$LogoutButtonPressedImpl implements LogoutButtonPressed {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(HomeInitiated value)? homeInitiated,
     TResult? Function(LogoutButtonPressed value)? logoutButtonPressed,
+    TResult? Function(ViewProfileButtonPressed value)? viewProfileButtonPressed,
   }) {
     return logoutButtonPressed?.call(this);
   }
@@ -274,6 +294,7 @@ class _$LogoutButtonPressedImpl implements LogoutButtonPressed {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(HomeInitiated value)? homeInitiated,
     TResult Function(LogoutButtonPressed value)? logoutButtonPressed,
+    TResult Function(ViewProfileButtonPressed value)? viewProfileButtonPressed,
     required TResult orElse(),
   }) {
     if (logoutButtonPressed != null) {
@@ -285,4 +306,119 @@ class _$LogoutButtonPressedImpl implements LogoutButtonPressed {
 
 abstract class LogoutButtonPressed implements HomeEvent {
   const factory LogoutButtonPressed() = _$LogoutButtonPressedImpl;
+}
+
+/// @nodoc
+abstract class _$$ViewProfileButtonPressedImplCopyWith<$Res> {
+  factory _$$ViewProfileButtonPressedImplCopyWith(
+          _$ViewProfileButtonPressedImpl value,
+          $Res Function(_$ViewProfileButtonPressedImpl) then) =
+      __$$ViewProfileButtonPressedImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ViewProfileButtonPressedImplCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$ViewProfileButtonPressedImpl>
+    implements _$$ViewProfileButtonPressedImplCopyWith<$Res> {
+  __$$ViewProfileButtonPressedImplCopyWithImpl(
+      _$ViewProfileButtonPressedImpl _value,
+      $Res Function(_$ViewProfileButtonPressedImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of HomeEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$ViewProfileButtonPressedImpl implements ViewProfileButtonPressed {
+  const _$ViewProfileButtonPressedImpl();
+
+  @override
+  String toString() {
+    return 'HomeEvent.viewProfileButtonPressed()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ViewProfileButtonPressedImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() homeInitiated,
+    required TResult Function() logoutButtonPressed,
+    required TResult Function() viewProfileButtonPressed,
+  }) {
+    return viewProfileButtonPressed();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? homeInitiated,
+    TResult? Function()? logoutButtonPressed,
+    TResult? Function()? viewProfileButtonPressed,
+  }) {
+    return viewProfileButtonPressed?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? homeInitiated,
+    TResult Function()? logoutButtonPressed,
+    TResult Function()? viewProfileButtonPressed,
+    required TResult orElse(),
+  }) {
+    if (viewProfileButtonPressed != null) {
+      return viewProfileButtonPressed();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(HomeInitiated value) homeInitiated,
+    required TResult Function(LogoutButtonPressed value) logoutButtonPressed,
+    required TResult Function(ViewProfileButtonPressed value)
+        viewProfileButtonPressed,
+  }) {
+    return viewProfileButtonPressed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(HomeInitiated value)? homeInitiated,
+    TResult? Function(LogoutButtonPressed value)? logoutButtonPressed,
+    TResult? Function(ViewProfileButtonPressed value)? viewProfileButtonPressed,
+  }) {
+    return viewProfileButtonPressed?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(HomeInitiated value)? homeInitiated,
+    TResult Function(LogoutButtonPressed value)? logoutButtonPressed,
+    TResult Function(ViewProfileButtonPressed value)? viewProfileButtonPressed,
+    required TResult orElse(),
+  }) {
+    if (viewProfileButtonPressed != null) {
+      return viewProfileButtonPressed(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ViewProfileButtonPressed implements HomeEvent {
+  const factory ViewProfileButtonPressed() = _$ViewProfileButtonPressedImpl;
 }

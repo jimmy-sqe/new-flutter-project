@@ -14,6 +14,7 @@ import 'package:app/navigation/app_navigator_impl.dart' as _i101;
 import 'package:app/navigation/routes/app_router.dart' as _i931;
 import 'package:app/ui/home/bloc/home_bloc.dart' as _i87;
 import 'package:app/ui/login/bloc/login_bloc.dart' as _i152;
+import 'package:app/ui/user_profile/bloc/user_profile_bloc.dart' as _i142;
 import 'package:domain/domain.dart' as _i494;
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
@@ -31,14 +32,20 @@ extension GetItInjectableX on _i174.GetIt {
     );
     gh.factory<_i639.CommonBloc>(() => _i639.CommonBloc());
     gh.lazySingleton<_i931.AppRouter>(() => _i931.AppRouter());
+    gh.factory<_i152.LoginBloc>(() => _i152.LoginBloc(
+          gh<_i494.LoginUseCase>(),
+          gh<_i494.LoginWithGoogleUseCase>(),
+        ));
     gh.factory<_i87.HomeBloc>(
         () => _i87.HomeBloc(gh<_i494.AuthenticationRepository>()));
     gh.lazySingleton<_i494.AppNavigator>(
         () => _i101.AppNavigatorImpl(gh<_i931.AppRouter>()));
+    gh.factory<_i142.UserProfileBloc>(() => _i142.UserProfileBloc(
+          gh<_i494.GetUserProfileUseCase>(),
+          gh<_i494.AuthenticationRepository>(),
+        ));
     gh.lazySingleton<_i356.AppBloc>(
         () => _i356.AppBloc(gh<_i494.Repository>()));
-    gh.factory<_i152.LoginBloc>(
-        () => _i152.LoginBloc(gh<_i494.LoginUseCase>()));
     return this;
   }
 }

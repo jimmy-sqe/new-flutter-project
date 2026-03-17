@@ -21,6 +21,7 @@ mixin _$AppRouteInfo {
     required TResult Function() login,
     required TResult Function() main,
     required TResult Function() home,
+    required TResult Function() userProfile,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -28,6 +29,7 @@ mixin _$AppRouteInfo {
     TResult? Function()? login,
     TResult? Function()? main,
     TResult? Function()? home,
+    TResult? Function()? userProfile,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -35,6 +37,7 @@ mixin _$AppRouteInfo {
     TResult Function()? login,
     TResult Function()? main,
     TResult Function()? home,
+    TResult Function()? userProfile,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -43,6 +46,7 @@ mixin _$AppRouteInfo {
     required TResult Function(_Login value) login,
     required TResult Function(_Main value) main,
     required TResult Function(_Home value) home,
+    required TResult Function(_UserProfile value) userProfile,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -50,6 +54,7 @@ mixin _$AppRouteInfo {
     TResult? Function(_Login value)? login,
     TResult? Function(_Main value)? main,
     TResult? Function(_Home value)? home,
+    TResult? Function(_UserProfile value)? userProfile,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -57,6 +62,7 @@ mixin _$AppRouteInfo {
     TResult Function(_Login value)? login,
     TResult Function(_Main value)? main,
     TResult Function(_Home value)? home,
+    TResult Function(_UserProfile value)? userProfile,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -127,6 +133,7 @@ class _$LoginImpl implements _Login {
     required TResult Function() login,
     required TResult Function() main,
     required TResult Function() home,
+    required TResult Function() userProfile,
   }) {
     return login();
   }
@@ -137,6 +144,7 @@ class _$LoginImpl implements _Login {
     TResult? Function()? login,
     TResult? Function()? main,
     TResult? Function()? home,
+    TResult? Function()? userProfile,
   }) {
     return login?.call();
   }
@@ -147,6 +155,7 @@ class _$LoginImpl implements _Login {
     TResult Function()? login,
     TResult Function()? main,
     TResult Function()? home,
+    TResult Function()? userProfile,
     required TResult orElse(),
   }) {
     if (login != null) {
@@ -161,6 +170,7 @@ class _$LoginImpl implements _Login {
     required TResult Function(_Login value) login,
     required TResult Function(_Main value) main,
     required TResult Function(_Home value) home,
+    required TResult Function(_UserProfile value) userProfile,
   }) {
     return login(this);
   }
@@ -171,6 +181,7 @@ class _$LoginImpl implements _Login {
     TResult? Function(_Login value)? login,
     TResult? Function(_Main value)? main,
     TResult? Function(_Home value)? home,
+    TResult? Function(_UserProfile value)? userProfile,
   }) {
     return login?.call(this);
   }
@@ -181,6 +192,7 @@ class _$LoginImpl implements _Login {
     TResult Function(_Login value)? login,
     TResult Function(_Main value)? main,
     TResult Function(_Home value)? home,
+    TResult Function(_UserProfile value)? userProfile,
     required TResult orElse(),
   }) {
     if (login != null) {
@@ -237,6 +249,7 @@ class _$MainImpl implements _Main {
     required TResult Function() login,
     required TResult Function() main,
     required TResult Function() home,
+    required TResult Function() userProfile,
   }) {
     return main();
   }
@@ -247,6 +260,7 @@ class _$MainImpl implements _Main {
     TResult? Function()? login,
     TResult? Function()? main,
     TResult? Function()? home,
+    TResult? Function()? userProfile,
   }) {
     return main?.call();
   }
@@ -257,6 +271,7 @@ class _$MainImpl implements _Main {
     TResult Function()? login,
     TResult Function()? main,
     TResult Function()? home,
+    TResult Function()? userProfile,
     required TResult orElse(),
   }) {
     if (main != null) {
@@ -271,6 +286,7 @@ class _$MainImpl implements _Main {
     required TResult Function(_Login value) login,
     required TResult Function(_Main value) main,
     required TResult Function(_Home value) home,
+    required TResult Function(_UserProfile value) userProfile,
   }) {
     return main(this);
   }
@@ -281,6 +297,7 @@ class _$MainImpl implements _Main {
     TResult? Function(_Login value)? login,
     TResult? Function(_Main value)? main,
     TResult? Function(_Home value)? home,
+    TResult? Function(_UserProfile value)? userProfile,
   }) {
     return main?.call(this);
   }
@@ -291,6 +308,7 @@ class _$MainImpl implements _Main {
     TResult Function(_Login value)? login,
     TResult Function(_Main value)? main,
     TResult Function(_Home value)? home,
+    TResult Function(_UserProfile value)? userProfile,
     required TResult orElse(),
   }) {
     if (main != null) {
@@ -347,6 +365,7 @@ class _$HomeImpl implements _Home {
     required TResult Function() login,
     required TResult Function() main,
     required TResult Function() home,
+    required TResult Function() userProfile,
   }) {
     return home();
   }
@@ -357,6 +376,7 @@ class _$HomeImpl implements _Home {
     TResult? Function()? login,
     TResult? Function()? main,
     TResult? Function()? home,
+    TResult? Function()? userProfile,
   }) {
     return home?.call();
   }
@@ -367,6 +387,7 @@ class _$HomeImpl implements _Home {
     TResult Function()? login,
     TResult Function()? main,
     TResult Function()? home,
+    TResult Function()? userProfile,
     required TResult orElse(),
   }) {
     if (home != null) {
@@ -381,6 +402,7 @@ class _$HomeImpl implements _Home {
     required TResult Function(_Login value) login,
     required TResult Function(_Main value) main,
     required TResult Function(_Home value) home,
+    required TResult Function(_UserProfile value) userProfile,
   }) {
     return home(this);
   }
@@ -391,6 +413,7 @@ class _$HomeImpl implements _Home {
     TResult? Function(_Login value)? login,
     TResult? Function(_Main value)? main,
     TResult? Function(_Home value)? home,
+    TResult? Function(_UserProfile value)? userProfile,
   }) {
     return home?.call(this);
   }
@@ -401,6 +424,7 @@ class _$HomeImpl implements _Home {
     TResult Function(_Login value)? login,
     TResult Function(_Main value)? main,
     TResult Function(_Home value)? home,
+    TResult Function(_UserProfile value)? userProfile,
     required TResult orElse(),
   }) {
     if (home != null) {
@@ -412,4 +436,121 @@ class _$HomeImpl implements _Home {
 
 abstract class _Home implements AppRouteInfo {
   const factory _Home() = _$HomeImpl;
+}
+
+/// @nodoc
+abstract class _$$UserProfileImplCopyWith<$Res> {
+  factory _$$UserProfileImplCopyWith(
+          _$UserProfileImpl value, $Res Function(_$UserProfileImpl) then) =
+      __$$UserProfileImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$UserProfileImplCopyWithImpl<$Res>
+    extends _$AppRouteInfoCopyWithImpl<$Res, _$UserProfileImpl>
+    implements _$$UserProfileImplCopyWith<$Res> {
+  __$$UserProfileImplCopyWithImpl(
+      _$UserProfileImpl _value, $Res Function(_$UserProfileImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppRouteInfo
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$UserProfileImpl implements _UserProfile {
+  const _$UserProfileImpl();
+
+  @override
+  String toString() {
+    return 'AppRouteInfo.userProfile()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$UserProfileImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() login,
+    required TResult Function() main,
+    required TResult Function() home,
+    required TResult Function() userProfile,
+  }) {
+    return userProfile();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? login,
+    TResult? Function()? main,
+    TResult? Function()? home,
+    TResult? Function()? userProfile,
+  }) {
+    return userProfile?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? login,
+    TResult Function()? main,
+    TResult Function()? home,
+    TResult Function()? userProfile,
+    required TResult orElse(),
+  }) {
+    if (userProfile != null) {
+      return userProfile();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Login value) login,
+    required TResult Function(_Main value) main,
+    required TResult Function(_Home value) home,
+    required TResult Function(_UserProfile value) userProfile,
+  }) {
+    return userProfile(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Login value)? login,
+    TResult? Function(_Main value)? main,
+    TResult? Function(_Home value)? home,
+    TResult? Function(_UserProfile value)? userProfile,
+  }) {
+    return userProfile?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Login value)? login,
+    TResult Function(_Main value)? main,
+    TResult Function(_Home value)? home,
+    TResult Function(_UserProfile value)? userProfile,
+    required TResult orElse(),
+  }) {
+    if (userProfile != null) {
+      return userProfile(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _UserProfile implements AppRouteInfo {
+  const factory _UserProfile() = _$UserProfileImpl;
 }
