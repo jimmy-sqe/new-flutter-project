@@ -21,6 +21,7 @@ mixin _$LoginEvent {
     required TResult Function(String email) emailTextFieldChanged,
     required TResult Function(String password) passwordTextFieldChanged,
     required TResult Function() loginButtonPressed,
+    required TResult Function() googleLoginButtonPressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -28,6 +29,7 @@ mixin _$LoginEvent {
     TResult? Function(String email)? emailTextFieldChanged,
     TResult? Function(String password)? passwordTextFieldChanged,
     TResult? Function()? loginButtonPressed,
+    TResult? Function()? googleLoginButtonPressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -35,16 +37,18 @@ mixin _$LoginEvent {
     TResult Function(String email)? emailTextFieldChanged,
     TResult Function(String password)? passwordTextFieldChanged,
     TResult Function()? loginButtonPressed,
+    TResult Function()? googleLoginButtonPressed,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(EmailTextFieldChanged value)
-        emailTextFieldChanged,
+    required TResult Function(EmailTextFieldChanged value) emailTextFieldChanged,
     required TResult Function(PasswordTextFieldChanged value)
         passwordTextFieldChanged,
     required TResult Function(LoginButtonPressed value) loginButtonPressed,
+    required TResult Function(GoogleLoginButtonPressed value)
+        googleLoginButtonPressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -52,6 +56,7 @@ mixin _$LoginEvent {
     TResult? Function(EmailTextFieldChanged value)? emailTextFieldChanged,
     TResult? Function(PasswordTextFieldChanged value)? passwordTextFieldChanged,
     TResult? Function(LoginButtonPressed value)? loginButtonPressed,
+    TResult? Function(GoogleLoginButtonPressed value)? googleLoginButtonPressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -59,6 +64,7 @@ mixin _$LoginEvent {
     TResult Function(EmailTextFieldChanged value)? emailTextFieldChanged,
     TResult Function(PasswordTextFieldChanged value)? passwordTextFieldChanged,
     TResult Function(LoginButtonPressed value)? loginButtonPressed,
+    TResult Function(GoogleLoginButtonPressed value)? googleLoginButtonPressed,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -158,6 +164,7 @@ class _$EmailTextFieldChangedImpl implements EmailTextFieldChanged {
     required TResult Function(String email) emailTextFieldChanged,
     required TResult Function(String password) passwordTextFieldChanged,
     required TResult Function() loginButtonPressed,
+    required TResult Function() googleLoginButtonPressed,
   }) {
     return emailTextFieldChanged(email);
   }
@@ -168,6 +175,7 @@ class _$EmailTextFieldChangedImpl implements EmailTextFieldChanged {
     TResult? Function(String email)? emailTextFieldChanged,
     TResult? Function(String password)? passwordTextFieldChanged,
     TResult? Function()? loginButtonPressed,
+    TResult? Function()? googleLoginButtonPressed,
   }) {
     return emailTextFieldChanged?.call(email);
   }
@@ -178,22 +186,25 @@ class _$EmailTextFieldChangedImpl implements EmailTextFieldChanged {
     TResult Function(String email)? emailTextFieldChanged,
     TResult Function(String password)? passwordTextFieldChanged,
     TResult Function()? loginButtonPressed,
+    TResult Function()? googleLoginButtonPressed,
     required TResult orElse(),
   }) {
     if (emailTextFieldChanged != null) {
       return emailTextFieldChanged(email);
     }
+
     return orElse();
   }
 
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(EmailTextFieldChanged value)
-        emailTextFieldChanged,
+    required TResult Function(EmailTextFieldChanged value) emailTextFieldChanged,
     required TResult Function(PasswordTextFieldChanged value)
         passwordTextFieldChanged,
     required TResult Function(LoginButtonPressed value) loginButtonPressed,
+    required TResult Function(GoogleLoginButtonPressed value)
+        googleLoginButtonPressed,
   }) {
     return emailTextFieldChanged(this);
   }
@@ -204,6 +215,7 @@ class _$EmailTextFieldChangedImpl implements EmailTextFieldChanged {
     TResult? Function(EmailTextFieldChanged value)? emailTextFieldChanged,
     TResult? Function(PasswordTextFieldChanged value)? passwordTextFieldChanged,
     TResult? Function(LoginButtonPressed value)? loginButtonPressed,
+    TResult? Function(GoogleLoginButtonPressed value)? googleLoginButtonPressed,
   }) {
     return emailTextFieldChanged?.call(this);
   }
@@ -214,11 +226,13 @@ class _$EmailTextFieldChangedImpl implements EmailTextFieldChanged {
     TResult Function(EmailTextFieldChanged value)? emailTextFieldChanged,
     TResult Function(PasswordTextFieldChanged value)? passwordTextFieldChanged,
     TResult Function(LoginButtonPressed value)? loginButtonPressed,
+    TResult Function(GoogleLoginButtonPressed value)? googleLoginButtonPressed,
     required TResult orElse(),
   }) {
     if (emailTextFieldChanged != null) {
       return emailTextFieldChanged(this);
     }
+
     return orElse();
   }
 }
@@ -311,6 +325,7 @@ class _$PasswordTextFieldChangedImpl implements PasswordTextFieldChanged {
     required TResult Function(String email) emailTextFieldChanged,
     required TResult Function(String password) passwordTextFieldChanged,
     required TResult Function() loginButtonPressed,
+    required TResult Function() googleLoginButtonPressed,
   }) {
     return passwordTextFieldChanged(password);
   }
@@ -321,6 +336,7 @@ class _$PasswordTextFieldChangedImpl implements PasswordTextFieldChanged {
     TResult? Function(String email)? emailTextFieldChanged,
     TResult? Function(String password)? passwordTextFieldChanged,
     TResult? Function()? loginButtonPressed,
+    TResult? Function()? googleLoginButtonPressed,
   }) {
     return passwordTextFieldChanged?.call(password);
   }
@@ -331,22 +347,25 @@ class _$PasswordTextFieldChangedImpl implements PasswordTextFieldChanged {
     TResult Function(String email)? emailTextFieldChanged,
     TResult Function(String password)? passwordTextFieldChanged,
     TResult Function()? loginButtonPressed,
+    TResult Function()? googleLoginButtonPressed,
     required TResult orElse(),
   }) {
     if (passwordTextFieldChanged != null) {
       return passwordTextFieldChanged(password);
     }
+
     return orElse();
   }
 
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(EmailTextFieldChanged value)
-        emailTextFieldChanged,
+    required TResult Function(EmailTextFieldChanged value) emailTextFieldChanged,
     required TResult Function(PasswordTextFieldChanged value)
         passwordTextFieldChanged,
     required TResult Function(LoginButtonPressed value) loginButtonPressed,
+    required TResult Function(GoogleLoginButtonPressed value)
+        googleLoginButtonPressed,
   }) {
     return passwordTextFieldChanged(this);
   }
@@ -357,6 +376,7 @@ class _$PasswordTextFieldChangedImpl implements PasswordTextFieldChanged {
     TResult? Function(EmailTextFieldChanged value)? emailTextFieldChanged,
     TResult? Function(PasswordTextFieldChanged value)? passwordTextFieldChanged,
     TResult? Function(LoginButtonPressed value)? loginButtonPressed,
+    TResult? Function(GoogleLoginButtonPressed value)? googleLoginButtonPressed,
   }) {
     return passwordTextFieldChanged?.call(this);
   }
@@ -367,11 +387,13 @@ class _$PasswordTextFieldChangedImpl implements PasswordTextFieldChanged {
     TResult Function(EmailTextFieldChanged value)? emailTextFieldChanged,
     TResult Function(PasswordTextFieldChanged value)? passwordTextFieldChanged,
     TResult Function(LoginButtonPressed value)? loginButtonPressed,
+    TResult Function(GoogleLoginButtonPressed value)? googleLoginButtonPressed,
     required TResult orElse(),
   }) {
     if (passwordTextFieldChanged != null) {
       return passwordTextFieldChanged(this);
     }
+
     return orElse();
   }
 }
@@ -433,6 +455,7 @@ class _$LoginButtonPressedImpl implements LoginButtonPressed {
     required TResult Function(String email) emailTextFieldChanged,
     required TResult Function(String password) passwordTextFieldChanged,
     required TResult Function() loginButtonPressed,
+    required TResult Function() googleLoginButtonPressed,
   }) {
     return loginButtonPressed();
   }
@@ -443,6 +466,7 @@ class _$LoginButtonPressedImpl implements LoginButtonPressed {
     TResult? Function(String email)? emailTextFieldChanged,
     TResult? Function(String password)? passwordTextFieldChanged,
     TResult? Function()? loginButtonPressed,
+    TResult? Function()? googleLoginButtonPressed,
   }) {
     return loginButtonPressed?.call();
   }
@@ -453,22 +477,25 @@ class _$LoginButtonPressedImpl implements LoginButtonPressed {
     TResult Function(String email)? emailTextFieldChanged,
     TResult Function(String password)? passwordTextFieldChanged,
     TResult Function()? loginButtonPressed,
+    TResult Function()? googleLoginButtonPressed,
     required TResult orElse(),
   }) {
     if (loginButtonPressed != null) {
       return loginButtonPressed();
     }
+
     return orElse();
   }
 
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(EmailTextFieldChanged value)
-        emailTextFieldChanged,
+    required TResult Function(EmailTextFieldChanged value) emailTextFieldChanged,
     required TResult Function(PasswordTextFieldChanged value)
         passwordTextFieldChanged,
     required TResult Function(LoginButtonPressed value) loginButtonPressed,
+    required TResult Function(GoogleLoginButtonPressed value)
+        googleLoginButtonPressed,
   }) {
     return loginButtonPressed(this);
   }
@@ -479,6 +506,7 @@ class _$LoginButtonPressedImpl implements LoginButtonPressed {
     TResult? Function(EmailTextFieldChanged value)? emailTextFieldChanged,
     TResult? Function(PasswordTextFieldChanged value)? passwordTextFieldChanged,
     TResult? Function(LoginButtonPressed value)? loginButtonPressed,
+    TResult? Function(GoogleLoginButtonPressed value)? googleLoginButtonPressed,
   }) {
     return loginButtonPressed?.call(this);
   }
@@ -489,15 +517,141 @@ class _$LoginButtonPressedImpl implements LoginButtonPressed {
     TResult Function(EmailTextFieldChanged value)? emailTextFieldChanged,
     TResult Function(PasswordTextFieldChanged value)? passwordTextFieldChanged,
     TResult Function(LoginButtonPressed value)? loginButtonPressed,
+    TResult Function(GoogleLoginButtonPressed value)? googleLoginButtonPressed,
     required TResult orElse(),
   }) {
     if (loginButtonPressed != null) {
       return loginButtonPressed(this);
     }
+
     return orElse();
   }
 }
 
 abstract class LoginButtonPressed implements LoginEvent {
   const factory LoginButtonPressed() = _$LoginButtonPressedImpl;
+}
+
+/// @nodoc
+abstract class _$$GoogleLoginButtonPressedImplCopyWith<$Res> {
+  factory _$$GoogleLoginButtonPressedImplCopyWith(
+          _$GoogleLoginButtonPressedImpl value,
+          $Res Function(_$GoogleLoginButtonPressedImpl) then) =
+      __$$GoogleLoginButtonPressedImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$GoogleLoginButtonPressedImplCopyWithImpl<$Res>
+    extends _$LoginEventCopyWithImpl<$Res, _$GoogleLoginButtonPressedImpl>
+    implements _$$GoogleLoginButtonPressedImplCopyWith<$Res> {
+  __$$GoogleLoginButtonPressedImplCopyWithImpl(
+      _$GoogleLoginButtonPressedImpl _value,
+      $Res Function(_$GoogleLoginButtonPressedImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of LoginEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$GoogleLoginButtonPressedImpl implements GoogleLoginButtonPressed {
+  const _$GoogleLoginButtonPressedImpl();
+
+  @override
+  String toString() {
+    return 'LoginEvent.googleLoginButtonPressed()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GoogleLoginButtonPressedImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String email) emailTextFieldChanged,
+    required TResult Function(String password) passwordTextFieldChanged,
+    required TResult Function() loginButtonPressed,
+    required TResult Function() googleLoginButtonPressed,
+  }) {
+    return googleLoginButtonPressed();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String email)? emailTextFieldChanged,
+    TResult? Function(String password)? passwordTextFieldChanged,
+    TResult? Function()? loginButtonPressed,
+    TResult? Function()? googleLoginButtonPressed,
+  }) {
+    return googleLoginButtonPressed?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String email)? emailTextFieldChanged,
+    TResult Function(String password)? passwordTextFieldChanged,
+    TResult Function()? loginButtonPressed,
+    TResult Function()? googleLoginButtonPressed,
+    required TResult orElse(),
+  }) {
+    if (googleLoginButtonPressed != null) {
+      return googleLoginButtonPressed();
+    }
+
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(EmailTextFieldChanged value) emailTextFieldChanged,
+    required TResult Function(PasswordTextFieldChanged value)
+        passwordTextFieldChanged,
+    required TResult Function(LoginButtonPressed value) loginButtonPressed,
+    required TResult Function(GoogleLoginButtonPressed value)
+        googleLoginButtonPressed,
+  }) {
+    return googleLoginButtonPressed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(EmailTextFieldChanged value)? emailTextFieldChanged,
+    TResult? Function(PasswordTextFieldChanged value)? passwordTextFieldChanged,
+    TResult? Function(LoginButtonPressed value)? loginButtonPressed,
+    TResult? Function(GoogleLoginButtonPressed value)? googleLoginButtonPressed,
+  }) {
+    return googleLoginButtonPressed?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EmailTextFieldChanged value)? emailTextFieldChanged,
+    TResult Function(PasswordTextFieldChanged value)? passwordTextFieldChanged,
+    TResult Function(LoginButtonPressed value)? loginButtonPressed,
+    TResult Function(GoogleLoginButtonPressed value)? googleLoginButtonPressed,
+    required TResult orElse(),
+  }) {
+    if (googleLoginButtonPressed != null) {
+      return googleLoginButtonPressed(this);
+    }
+
+    return orElse();
+  }
+}
+
+abstract class GoogleLoginButtonPressed implements LoginEvent {
+  const factory GoogleLoginButtonPressed() = _$GoogleLoginButtonPressedImpl;
 }

@@ -8,7 +8,8 @@ import 'package:app/ui/login/bloc/login_state.dart';
 
 @Injectable()
 class LoginBloc extends BaseBloc<LoginEvent, LoginState> {
-  LoginBloc(this._loginUseCase) : super(const LoginState()) {
+  LoginBloc(this._loginUseCase, this._loginWithGoogleUseCase)
+      : super(const LoginState()) {
     on<EmailTextFieldChanged>(
       _onEmailTextFieldChanged,
       transformer: distinct(),
@@ -21,9 +22,14 @@ class LoginBloc extends BaseBloc<LoginEvent, LoginState> {
       _onLoginButtonPressed,
       transformer: log(),
     );
+    on<GoogleLoginButtonPressed>(
+      _onGoogleLoginButtonPressed,
+      transformer: log(),
+    );
   }
 
   final LoginUseCase _loginUseCase;
+  final LoginWithGoogleUseCase _loginWithGoogleUseCase;
 
   void _onEmailTextFieldChanged(
     EmailTextFieldChanged event,
@@ -65,6 +71,21 @@ class LoginBloc extends BaseBloc<LoginEvent, LoginState> {
             password: state.password,
           ),
         );
+
+        navigator.replaceAll([const AppRouteInfo.main()]);
+      },
+      handleError: true,
+      handleRetry: false,
+    );
+  }
+
+  Future<void> _onGoogleLoginButtonPressed(
+    GoogleLoginButtonPressed event,
+    Emitter<LoginState> emit,
+  ) async {
+    await runBlocCatching(
+      action: () async {
+        await _loginWithGoogleUseCase.execute(const LoginWithGoogleInput());
 
         navigator.replaceAll([const AppRouteInfo.main()]);
       },

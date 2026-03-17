@@ -19,4 +19,15 @@ class AuthenticationApiService {
       },
     );
   }
+
+  Future<Response<dynamic>> loginWithGoogle({
+    required String idToken,
+  }) async {
+    return _dio.post<dynamic>(
+      '/api/v1/auth/google',
+      data: {
+        'id_token': idToken,
+      },
+    );
+  }
 }
