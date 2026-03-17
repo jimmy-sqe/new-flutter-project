@@ -50,6 +50,9 @@ class _LoginPageState extends BasePageState<LoginPage, LoginBloc> {
           onLoginPressed: () {
             bloc.add(const LoginEvent.loginButtonPressed());
           },
+          onGoogleLoginPressed: () {
+            bloc.add(const LoginEvent.googleLoginButtonPressed());
+          },
         );
       },
     );

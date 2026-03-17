@@ -15,4 +15,6 @@ class LoginEvent extends BaseBlocEvent with _$LoginEvent {
   }) = PasswordTextFieldChanged;
 
   const factory LoginEvent.loginButtonPressed() = LoginButtonPressed;
+
+  const factory LoginEvent.googleLoginButtonPressed() = GoogleLoginButtonPressed;
 }

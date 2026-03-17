@@ -7,6 +7,7 @@ class LoginView extends StatelessWidget {
     required this.passwordController,
     required this.isLoginButtonEnabled,
     required this.onLoginPressed,
+    required this.onGoogleLoginPressed,
     super.key,
   });
 
@@ -14,6 +15,7 @@ class LoginView extends StatelessWidget {
   final TextEditingController passwordController;
   final bool isLoginButtonEnabled;
   final VoidCallback onLoginPressed;
+  final VoidCallback onGoogleLoginPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -41,6 +43,8 @@ class LoginView extends StatelessWidget {
                 isEnabled: isLoginButtonEnabled,
                 onPressed: onLoginPressed,
               ),
+              const SizedBox(height: 16),
+              _GoogleLoginButton(onPressed: onGoogleLoginPressed),
             ],
           ),
         ),
@@ -111,6 +115,30 @@ class _LoginButton extends StatelessWidget {
       child: Text(
         S.of(context).loginButton,
         style: const TextStyle(fontSize: 16),
+      ),
+    );
+  }
+}
+
+class _GoogleLoginButton extends StatelessWidget {
+  const _GoogleLoginButton({required this.onPressed});
+
+  final VoidCallback onPressed;
+
+  @override
+  Widget build(BuildContext context) {
+    return OutlinedButton.icon(
+      onPressed: onPressed,
+      icon: const Icon(Icons.g_mobiledata, size: 24),
+      label: const Text(
+        'Sign in with Google',
+        style: TextStyle(fontSize: 16),
+      ),
+      style: OutlinedButton.styleFrom(
+        padding: const EdgeInsets.symmetric(vertical: 16),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(8),
+        ),
       ),
     );
   }
