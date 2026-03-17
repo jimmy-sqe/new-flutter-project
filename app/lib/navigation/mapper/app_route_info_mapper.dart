@@ -11,6 +11,7 @@ class AppRouteInfoMapper extends BaseRouteInfoMapper {
       login: () => const LoginRoute(),
       main: () => const MainRoute(),
       home: () => const HomeRoute(),
+      userProfile: () => const UserProfileRoute(),
     );
   }
 }
